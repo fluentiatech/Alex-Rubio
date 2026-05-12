@@ -168,7 +168,7 @@ export default function Timeline() {
             <div
               key={team.id}
               ref={el => { teamRefs.current[i] = el }}
-              className="absolute inset-0 px-6 md:px-14 lg:px-20 pb-10 flex flex-col justify-center"
+              className="absolute inset-0 px-6 md:px-14 lg:px-20 pb-4 md:pb-10 flex flex-col justify-center"
               style={{ opacity: 0 }}
             >
               {/* Watermark */}
@@ -188,7 +188,7 @@ export default function Timeline() {
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 relative z-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16 relative z-10">
 
                 {/* Left — text */}
                 <div className="relative">
@@ -209,8 +209,8 @@ export default function Timeline() {
                   </div>
 
                   <blockquote
-                    className="font-display uppercase leading-tight mb-5"
-                    style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.8rem)', color: team.quoteColor }}
+                    className="font-display uppercase leading-tight mb-4 md:mb-5"
+                    style={{ fontSize: 'clamp(1.2rem, 2.8vw, 2.8rem)', color: team.quoteColor }}
                   >
                     {team.quote}
                   </blockquote>
@@ -219,12 +219,12 @@ export default function Timeline() {
                     {team.description}
                   </p>
 
-                  <div className="flex gap-10 mb-6">
+                  <div className="flex gap-6 md:gap-10 mb-6">
                     <div className="border-t border-zinc-800 pt-4">
                       <p className="font-mono text-[0.5rem] tracking-[0.2em] uppercase text-zinc-600 mb-1">Goles</p>
                       <div
                         className="font-display leading-none tabular"
-                        style={{ fontSize: 'clamp(2.8rem, 5vw, 4.8rem)', color: team.accent }}
+                        style={{ fontSize: 'clamp(2rem, 5vw, 4.8rem)', color: team.accent }}
                       >
                         <span ref={el => { counterRefs.current[i] = el }}>{team.goals}</span>
                       </div>
@@ -233,7 +233,7 @@ export default function Timeline() {
                       <p className="font-mono text-[0.5rem] tracking-[0.2em] uppercase text-zinc-600 mb-1">por 90'</p>
                       <div
                         className="font-display leading-none tabular text-zinc-500"
-                        style={{ fontSize: 'clamp(2.8rem, 5vw, 4.8rem)' }}
+                        style={{ fontSize: 'clamp(2rem, 5vw, 4.8rem)' }}
                       >
                         {team.goalsPer90}
                       </div>
@@ -243,7 +243,7 @@ export default function Timeline() {
                         <p className="font-mono text-[0.5rem] tracking-[0.2em] uppercase text-zinc-600 mb-1">Asistencias</p>
                         <div
                           className="font-display leading-none text-zinc-700 tabular"
-                          style={{ fontSize: 'clamp(2.8rem, 5vw, 4.8rem)' }}
+                          style={{ fontSize: 'clamp(2rem, 5vw, 4.8rem)' }}
                         >
                           {team.assists}
                         </div>
@@ -265,14 +265,14 @@ export default function Timeline() {
                 </div>
 
                 {/* Right — images */}
-                <div className="grid grid-cols-2 gap-3">
+                <div className="hidden md:grid grid-cols-2 gap-3 max-h-[65vh] overflow-hidden">
                   <div className="relative overflow-hidden rounded-sm aspect-[3/4]">
                     <Image src={team.images[0]} alt={`${team.name} — 1`} fill
                       className="object-cover" sizes="25vw"
                       style={{ objectPosition: team.id === 'murcia' ? '35% 50%' : team.id === 'antequera' ? '65% 50%' : '50% 50%' }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent" />
                   </div>
-                  <div className="relative overflow-hidden rounded-sm aspect-square mt-8">
+                  <div className="relative overflow-hidden rounded-sm aspect-[3/4] mt-6">
                     <Image src={team.images[1]} alt={`${team.name} — 2`} fill
                       className="object-cover" sizes="25vw"
                       style={{ objectPosition: team.id === 'murcia' ? '35% 50%' : team.id === 'villarreal' ? '65% 50%' : '50% 50%' }} />

@@ -98,8 +98,28 @@ export default function Navbar() {
           </span>
         </button>
 
-        <div className="hidden sm:block w-px h-3.5 bg-zinc-700/80 mx-1 flex-shrink-0" />
+        <div className="w-px h-3.5 bg-zinc-700/80 mx-1 flex-shrink-0" />
 
+        {/* Mobile: section dots */}
+        <div className="flex sm:hidden items-center gap-3 px-1">
+          {SECTIONS.map(({ id }) => {
+            const isActive = active === id
+            return (
+              <button
+                key={id}
+                onClick={() => scrollTo(id)}
+                aria-label={id}
+                className="w-1.5 h-1.5 rounded-full flex-shrink-0 transition-all duration-300"
+                style={{
+                  backgroundColor: isActive ? 'var(--accent)' : '#444',
+                  transform: isActive ? 'scale(1.6)' : 'scale(1)',
+                }}
+              />
+            )
+          })}
+        </div>
+
+        {/* Desktop: section labels */}
         {SECTIONS.map(({ id, label }) => {
           const isActive = active === id
           return (
