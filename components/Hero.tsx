@@ -193,16 +193,6 @@ export default function Hero() {
       {/* ── Content ── */}
       <div className="absolute bottom-0 left-0 z-10 w-full md:w-[62%] px-5 md:px-14 lg:px-20 pb-8 md:pb-16">
 
-        {/* Live pill */}
-        <div className="inline-flex items-center gap-2.5 mb-8 px-3 py-1.5 rounded-full"
-          style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)' }}>
-          <span className="w-[5px] h-[5px] rounded-full accent-pulse flex-shrink-0"
-            style={{ backgroundColor: 'var(--accent)' }} />
-          <span className="font-mono text-[0.48rem] md:text-[0.56rem] tracking-[0.2em] md:tracking-[0.28em] uppercase text-zinc-300">
-            Temporada 2025/26 · Segunda División
-          </span>
-        </div>
-
         {/* Name */}
         <div ref={nameRef} className="mb-3">
           <h1 className="font-display uppercase leading-none">

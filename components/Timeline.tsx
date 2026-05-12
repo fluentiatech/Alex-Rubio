@@ -265,16 +265,16 @@ export default function Timeline() {
                 </div>
 
                 {/* Right — images */}
-                <div className="hidden md:grid grid-cols-2 gap-3 max-h-[65vh] overflow-hidden">
-                  <div className="relative overflow-hidden rounded-sm aspect-[3/4]">
+                <div className="grid grid-cols-2 gap-2 md:gap-3 h-40 md:h-auto md:max-h-[65vh] md:overflow-hidden">
+                  <div className="relative overflow-hidden rounded-sm h-full md:h-auto md:aspect-[3/4]">
                     <Image src={team.images[0]} alt={`${team.name} — 1`} fill
-                      className="object-cover" sizes="25vw"
+                      className="object-cover" sizes="(max-width: 768px) 45vw, 25vw"
                       style={{ objectPosition: team.id === 'murcia' ? '35% 50%' : team.id === 'antequera' ? '65% 50%' : '50% 50%' }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent" />
                   </div>
-                  <div className="relative overflow-hidden rounded-sm aspect-[3/4] mt-6">
+                  <div className="relative overflow-hidden rounded-sm h-full md:h-auto md:aspect-[3/4] md:mt-6">
                     <Image src={team.images[1]} alt={`${team.name} — 2`} fill
-                      className="object-cover" sizes="25vw"
+                      className="object-cover" sizes="(max-width: 768px) 45vw, 25vw"
                       style={{ objectPosition: team.id === 'murcia' ? '35% 50%' : team.id === 'villarreal' ? '65% 50%' : '50% 50%' }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/50 to-transparent" />
                   </div>
