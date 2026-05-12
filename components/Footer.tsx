@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import SocialLinks from './SocialLinks'
 
 const NAV = ['Perfil', 'Trayectoria', 'Stats', 'Highlights']
 
@@ -46,18 +47,21 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Nav */}
-          <nav className="flex flex-wrap gap-x-8 gap-y-3">
-            {NAV.map(label => (
-              <button
-                key={label}
-                onClick={() => scrollTo(label)}
-                className="font-mono text-[0.58rem] tracking-[0.22em] uppercase text-zinc-500 hover:text-white transition-colors duration-200"
-              >
-                {label}
-              </button>
-            ))}
-          </nav>
+          {/* Nav + socials */}
+          <div className="flex flex-col gap-5">
+            <nav className="flex flex-wrap gap-x-8 gap-y-3">
+              {NAV.map(label => (
+                <button
+                  key={label}
+                  onClick={() => scrollTo(label)}
+                  className="font-mono text-[0.58rem] tracking-[0.22em] uppercase text-zinc-500 hover:text-white transition-colors duration-200"
+                >
+                  {label}
+                </button>
+              ))}
+            </nav>
+            <SocialLinks />
+          </div>
 
         </div>
 

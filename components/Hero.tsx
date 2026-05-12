@@ -5,6 +5,7 @@ import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import HeroVideoLoop from './HeroVideoLoop'
+import SocialLinks from './SocialLinks'
 
 // Striker's POV — penalty box, D arc, corner arcs, halfway line
 function PitchLines({ faint = false }: { faint?: boolean }) {
@@ -278,6 +279,12 @@ export default function Hero() {
             <path d="M1 7h12M8 3l5 4-5 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
+      </div>
+
+      {/* Social links — right edge */}
+      <div className="absolute right-5 md:right-8 bottom-10 md:bottom-14 z-10 flex flex-col items-center gap-4">
+        <div className="w-px h-10 bg-zinc-700/60" />
+        <SocialLinks className="flex-col" />
       </div>
 
       {/* Bottom rule */}
