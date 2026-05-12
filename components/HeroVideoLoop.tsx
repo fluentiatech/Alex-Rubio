@@ -2,13 +2,15 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+const B = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 const VIDEOS = [
-  '/AlexRubioLeganes_cut.mp4?v=6',
-  '/AlexRubioVillarreal_cut1.mp4?v=6',
-  '/AlexRubioVillarreal_cut2.mp4?v=6',
-  '/AlexRubioVillarreal_cut3.mp4?v=6',
-  '/AlexRubioAntequera_cut1.mp4?v=6',
-  '/AlexRubioAntequera_cut2.mp4?v=6',
+  `${B}/AlexRubioLeganes_cut.mp4?v=6`,
+  `${B}/AlexRubioVillarreal_cut1.mp4?v=6`,
+  `${B}/AlexRubioVillarreal_cut2.mp4?v=6`,
+  `${B}/AlexRubioVillarreal_cut3.mp4?v=6`,
+  `${B}/AlexRubioAntequera_cut1.mp4?v=6`,
+  `${B}/AlexRubioAntequera_cut2.mp4?v=6`,
 ]
 
 const CROSSFADE_TRIGGER = 0.8  // seconds before end

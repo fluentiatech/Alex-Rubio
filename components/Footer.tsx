@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom rule */}
-        <div className="flex items-center justify-between mt-10 pt-6 border-t border-zinc-800/50">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0 mt-10 pt-6 border-t border-zinc-800/50">
           <div className="flex items-center gap-2">
             <div className="w-4 h-px" style={{ backgroundColor: 'var(--accent)' }} />
             <span className="font-mono text-[0.48rem] tracking-[0.2em] uppercase text-zinc-700">

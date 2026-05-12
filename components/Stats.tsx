@@ -70,7 +70,7 @@ export default function Stats() {
         </div>
 
         {/* Asymmetric layout: images left, stats right */}
-        <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1fr] gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1fr] gap-10 lg:gap-24">
 
           {/* Images — B&W film grain */}
           <div className="grid grid-cols-2 gap-3 items-start">
@@ -105,7 +105,7 @@ export default function Stats() {
           {/* Stats */}
           <div>
             {/* Monument numbers — 3 best percentiles */}
-            <div className="grid grid-cols-3 gap-6 mb-16">
+            <div className="grid grid-cols-3 gap-3 md:gap-6 mb-12 md:mb-16">
               {[
                 { num: '3.44', label: 'Tiros / 90\'',       sub: 'Percentil 89' },
                 { num: '1.29', label: 'Tiros a puerta / 90\'', sub: 'Percentil 81' },
@@ -114,7 +114,7 @@ export default function Stats() {
                 <div key={label} className="stats-monument">
                   <div
                     className="font-display leading-none text-zinc-900 tabular"
-                    style={{ fontSize: 'clamp(2.4rem, 4.5vw, 4.5rem)' }}
+                    style={{ fontSize: 'clamp(1.6rem, 4.5vw, 4.5rem)' }}
                   >
                     {num}
                   </div>

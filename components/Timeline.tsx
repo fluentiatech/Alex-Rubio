@@ -120,15 +120,15 @@ export default function Timeline() {
           </div>
 
           {/* Team indicators */}
-          <div className="flex items-center mb-10">
+          <div className="flex items-center mb-8 overflow-x-auto scrollbar-none pb-1" style={{ WebkitOverflowScrolling: 'touch' }}>
             {TEAMS.map((t, i) => {
               const on = i === activeIdx
               return (
-                <div key={t.id} className="flex items-center">
+                <div key={t.id} className="flex items-center flex-shrink-0">
                   <div style={{ opacity: on ? 1 : 0.28, transition: 'opacity 0.3s' }}>
                     <div className="flex items-center gap-2 mb-0.5">
                       <div
-                        className="rounded-full transition-all duration-300"
+                        className="rounded-full transition-all duration-300 flex-shrink-0"
                         style={{
                           width: 6, height: 6,
                           backgroundColor: on ? t.accent : '#3a3a3a',
@@ -136,21 +136,21 @@ export default function Timeline() {
                         }}
                       />
                       <span
-                        className="font-display text-xs tracking-[0.18em] uppercase"
+                        className="font-display text-[0.7rem] md:text-xs tracking-[0.18em] uppercase whitespace-nowrap"
                         style={{ color: on ? t.accent : '#444', transition: 'color 0.3s' }}
                       >
                         {t.shortName}
                       </span>
                     </div>
-                    <p className="font-mono text-[0.48rem] tracking-[0.12em] text-zinc-700 pl-5">
+                    <p className="font-mono text-[0.44rem] tracking-[0.12em] text-zinc-700 pl-5 whitespace-nowrap">
                       {t.period}
                     </p>
                   </div>
                   {i < TEAMS.length - 1 && (
                     <div
-                      className="mx-5 h-px transition-colors duration-500"
+                      className="mx-3 md:mx-5 h-px flex-shrink-0 transition-colors duration-500"
                       style={{
-                        width: 48,
+                        width: 32,
                         backgroundColor: i < activeIdx ? TEAMS[activeIdx].accent : '#222',
                         opacity: 0.55,
                       }}

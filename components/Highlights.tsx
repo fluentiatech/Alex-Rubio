@@ -5,6 +5,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TOTAL_GOALS } from '@/lib/teams'
 
+const B = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 const TAG_COLORS: Record<string, string> = {
   Velocidad: '#E8D44D',
   'Último segundo': '#CC1F1F',
@@ -16,7 +18,7 @@ const TAG_COLORS: Record<string, string> = {
 const CLIPS = [
   {
     id: 'h1',
-    src: '/highlight1_cut.mp4',
+    src: `${B}/highlight1_cut.mp4`,
     rival: 'Granada B',
     competition: 'Primera RFEF',
     minute: "90+3'",
@@ -25,7 +27,7 @@ const CLIPS = [
   },
   {
     id: 'h2',
-    src: '/highlight2_cut.mp4',
+    src: `${B}/highlight2_cut.mp4`,
     rival: 'Cartagena',
     competition: 'Primera RFEF',
     minute: "82'",
@@ -34,7 +36,7 @@ const CLIPS = [
   },
   {
     id: 'h3',
-    src: '/highlight3_cut.mp4',
+    src: `${B}/highlight3_cut.mp4`,
     rival: 'Betis B',
     competition: 'Primera RFEF',
     minute: "39'",
@@ -43,7 +45,7 @@ const CLIPS = [
   },
   {
     id: 'h4',
-    src: '/highlight4_cut.mp4',
+    src: `${B}/highlight4_cut.mp4`,
     rival: 'Ponferradina',
     competition: 'Primera RFEF',
     minute: "51'",
@@ -52,7 +54,7 @@ const CLIPS = [
   },
   {
     id: 'h5',
-    src: '/highlight5_cut.mp4',
+    src: `${B}/highlight5_cut.mp4`,
     rival: 'Burgos',
     competition: 'Segunda División',
     minute: "63'",
@@ -62,7 +64,7 @@ const CLIPS = [
   },
   {
     id: 'h6',
-    src: '/highlight6_cut.mp4',
+    src: `${B}/highlight6_cut.mp4`,
     rival: 'Racing',
     competition: 'Segunda División',
     minute: "82'",
@@ -231,7 +233,7 @@ export default function Highlights() {
         {/* 9:16 grid — asymmetric 3 columns */}
         <div
           ref={gridRef}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4"
         >
           {CLIPS.map((clip, i) => (
             <HighlightCard key={clip.id} clip={clip} index={i} />

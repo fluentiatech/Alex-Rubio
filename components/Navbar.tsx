@@ -98,7 +98,7 @@ export default function Navbar() {
           </span>
         </button>
 
-        <div className="w-px h-3.5 bg-zinc-700/80 mx-1 flex-shrink-0" />
+        <div className="hidden sm:block w-px h-3.5 bg-zinc-700/80 mx-1 flex-shrink-0" />
 
         {SECTIONS.map(({ id, label }) => {
           const isActive = active === id
@@ -106,7 +106,7 @@ export default function Navbar() {
             <button
               key={id}
               onClick={() => scrollTo(id)}
-              className="relative font-body text-[0.67rem] tracking-[0.1em] uppercase px-3 py-1.5 rounded-full transition-all duration-200"
+              className="hidden sm:block relative font-body text-[0.67rem] tracking-[0.1em] uppercase px-3 py-1.5 rounded-full transition-all duration-200"
               style={{
                 color:      isActive ? 'var(--accent)' : '#666',
                 background: isActive ? 'rgba(255,255,255,0.05)' : 'transparent',

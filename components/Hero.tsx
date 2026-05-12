@@ -191,14 +191,14 @@ export default function Hero() {
       />
 
       {/* ── Content ── */}
-      <div className="absolute bottom-0 left-0 z-10 w-full md:w-[62%] px-6 md:px-14 lg:px-20 pb-12 md:pb-16">
+      <div className="absolute bottom-0 left-0 z-10 w-full md:w-[62%] px-5 md:px-14 lg:px-20 pb-8 md:pb-16">
 
         {/* Live pill */}
         <div className="inline-flex items-center gap-2.5 mb-8 px-3 py-1.5 rounded-full"
           style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.1)' }}>
           <span className="w-[5px] h-[5px] rounded-full accent-pulse flex-shrink-0"
             style={{ backgroundColor: 'var(--accent)' }} />
-          <span className="font-mono text-[0.56rem] tracking-[0.28em] uppercase text-zinc-300">
+          <span className="font-mono text-[0.48rem] md:text-[0.56rem] tracking-[0.2em] md:tracking-[0.28em] uppercase text-zinc-300">
             Temporada 2025/26 · Segunda División
           </span>
         </div>
@@ -207,11 +207,11 @@ export default function Hero() {
         <div ref={nameRef} className="mb-3">
           <h1 className="font-display uppercase leading-none">
             <span className="block text-zinc-400"
-              style={{ fontSize: 'clamp(2.8rem, 8vw, 8.5rem)', letterSpacing: '-0.01em' }}>
+              style={{ fontSize: 'clamp(2rem, 8vw, 8.5rem)', letterSpacing: '-0.01em' }}>
               ÁLEX
             </span>
             <span className="block text-white"
-              style={{ fontSize: 'clamp(4rem, 12vw, 13rem)', letterSpacing: '-0.02em', lineHeight: 0.85 }}>
+              style={{ fontSize: 'clamp(3rem, 12vw, 13rem)', letterSpacing: '-0.02em', lineHeight: 0.85 }}>
               RUBIO
             </span>
           </h1>
@@ -230,7 +230,7 @@ export default function Hero() {
         </p>
 
         {/* Próximo partido */}
-        <div ref={statsRef} className="mb-10">
+        <div ref={statsRef} className="mb-8 md:mb-10">
           <p className="font-mono text-[0.48rem] tracking-[0.28em] uppercase text-zinc-600 mb-4">
             Próximo partido
           </p>
