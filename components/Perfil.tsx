@@ -34,17 +34,17 @@ function PitchBackground() {
       <defs>
         {/* Stadium floodlights from top corners */}
         <radialGradient id="fl1" cx="4%" cy="0%" r="65%" gradientUnits="objectBoundingBox">
-          <stop offset="0%"   stopColor="white" stopOpacity="0.055" />
-          <stop offset="100%" stopColor="white" stopOpacity="0"     />
+          <stop offset="0%" stopColor="white" stopOpacity="0.055" />
+          <stop offset="100%" stopColor="white" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="fl2" cx="96%" cy="0%" r="65%" gradientUnits="objectBoundingBox">
-          <stop offset="0%"   stopColor="white" stopOpacity="0.045" />
-          <stop offset="100%" stopColor="white" stopOpacity="0"     />
+          <stop offset="0%" stopColor="white" stopOpacity="0.045" />
+          <stop offset="100%" stopColor="white" stopOpacity="0" />
         </radialGradient>
         {/* Penalty spot bloom */}
         <radialGradient id="spot" cx="50%" cy="50%" r="50%">
-          <stop offset="0%"   stopColor="white" stopOpacity="0.06" />
-          <stop offset="100%" stopColor="white" stopOpacity="0"    />
+          <stop offset="0%" stopColor="white" stopOpacity="0.06" />
+          <stop offset="100%" stopColor="white" stopOpacity="0" />
         </radialGradient>
       </defs>
 
@@ -66,26 +66,26 @@ function PitchBackground() {
       <circle cx="380" cy="450" r="45" fill="white" opacity="0.025" />
 
       {/* Corner arcs left side */}
-      <path d="M 4 88  A 48 48 0 0 1 52 40"  stroke="white" strokeWidth="1.8" opacity="0.11" />
+      <path d="M 4 88  A 48 48 0 0 1 52 40" stroke="white" strokeWidth="1.8" opacity="0.11" />
       <path d="M 4 812 A 48 48 0 0 0 52 860" stroke="white" strokeWidth="1.8" opacity="0.11" />
 
       {/* ── RIGHT HALF: final third + penalty area ── */}
       {/* Penalty box */}
       <rect x="1075" y="168" width="365" height="564" stroke="white" strokeWidth="1.8" opacity="0.13" />
       {/* 6-yard box */}
-      <rect x="1255" y="300" width="185" height="300" stroke="white" strokeWidth="1.6" opacity="0.1"  />
+      <rect x="1255" y="300" width="185" height="300" stroke="white" strokeWidth="1.6" opacity="0.1" />
       {/* Penalty arc — the D */}
       <path
         d="M 1042 268 A 158 158 0 0 1 1042 632"
         stroke="white" strokeWidth="1.8" opacity="0.11"
       />
       {/* Penalty spot */}
-      <circle cx="1155" cy="450" r="7"   fill="white" opacity="0.18" />
+      <circle cx="1155" cy="450" r="7" fill="white" opacity="0.18" />
       {/* Penalty spot bloom */}
       <ellipse cx="1155" cy="450" rx="90" ry="60" fill="url(#spot)" />
 
       {/* Corner arcs right side */}
-      <path d="M 1388 40  A 48 48 0 0 1 1436 88"  stroke="white" strokeWidth="1.8" opacity="0.11" />
+      <path d="M 1388 40  A 48 48 0 0 1 1436 88" stroke="white" strokeWidth="1.8" opacity="0.11" />
       <path d="M 1388 860 A 48 48 0 0 0 1436 812" stroke="white" strokeWidth="1.8" opacity="0.11" />
     </svg>
   )
@@ -93,8 +93,8 @@ function PitchBackground() {
 
 export default function Perfil() {
   const sectionRef = useRef<HTMLElement>(null)
-  const linesRef   = useRef<HTMLDivElement>(null)
-  const dotsRef    = useRef<HTMLDivElement>(null)
+  const linesRef = useRef<HTMLDivElement>(null)
+  const dotsRef = useRef<HTMLDivElement>(null)
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 3800, stopOnInteraction: false }),
@@ -106,7 +106,7 @@ export default function Perfil() {
     Array.from(dotsRef.current.children).forEach((dot, i) => {
       const el = dot as HTMLElement
       el.style.backgroundColor = i === idx ? 'var(--accent)' : '#3a3a3a'
-      el.style.transform       = i === idx ? 'scale(1.4)'    : 'scale(1)'
+      el.style.transform = i === idx ? 'scale(1.4)' : 'scale(1)'
     })
   }, [emblaApi])
 
@@ -186,7 +186,7 @@ export default function Perfil() {
             </div>
 
             <p className="font-body text-zinc-400 text-sm leading-relaxed max-w-[46ch] mb-8">
-              Con apenas 23 años, Álex Rubio lleva grabado el camino más corto al gol.
+              Con apenas 23 años, Alex Rubio lleva grabado el camino más corto al gol.
               No es velocidad, es anticipación. No es fuerza, es lectura. Cada partido
               confirma lo que su trayectoria ya anunciaba: este delantero no espera
               ocasiones, las construye.
@@ -194,10 +194,10 @@ export default function Perfil() {
 
             <div className="grid grid-cols-2 gap-5 max-w-[340px]">
               {[
-                { label: 'Edad',          value: '23'        },
-                { label: 'Altura',        value: "1'75"      },
-                { label: 'Pie dominante', value: 'Derecho'   },
-                { label: 'Posición',      value: 'Delantero' },
+                { label: 'Edad', value: '23' },
+                { label: 'Altura', value: "1'75" },
+                { label: 'Pie dominante', value: 'Derecho' },
+                { label: 'Posición', value: 'Delantero' },
               ].map(({ label, value }) => (
                 <div key={label} className="border-t border-zinc-700/60 pt-3">
                   <p className="font-mono text-[0.55rem] tracking-[0.22em] uppercase text-zinc-500 mb-1">
@@ -239,7 +239,7 @@ export default function Perfil() {
                       <div className="relative overflow-hidden" style={{ paddingTop: '133.33%' }}>
                         <Image
                           src={src}
-                          alt={`Álex Rubio — imagen ${i + 1}`}
+                          alt={`Alex Rubio — imagen ${i + 1}`}
                           fill
                           className="object-cover"
                           style={{ objectPosition: i === 1 ? 'center 35%' : i === 2 ? 'center 20%' : 'center center' }}
@@ -263,7 +263,7 @@ export default function Perfil() {
                   className="w-1.5 h-1.5 rounded-full transition-all duration-300"
                   style={{
                     backgroundColor: i === 0 ? 'var(--accent)' : '#3a3a3a',
-                    transform:       i === 0 ? 'scale(1.4)'    : 'scale(1)',
+                    transform: i === 0 ? 'scale(1.4)' : 'scale(1)',
                   }}
                   aria-label={`Foto ${i + 1}`}
                 />

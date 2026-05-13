@@ -3,14 +3,14 @@
 import { useEffect, useState } from 'react'
 
 const SECTIONS = [
-  { id: 'perfil',      label: 'Perfil'      },
+  { id: 'perfil', label: 'Perfil' },
   { id: 'trayectoria', label: 'Trayectoria' },
-  { id: 'stats',       label: 'Stats'       },
-  { id: 'highlights',  label: 'Highlights'  },
+  { id: 'stats', label: 'Stats' },
+  { id: 'highlights', label: 'Highlights' },
 ]
 
 export default function Navbar() {
-  const [active,   setActive]   = useState('')
+  const [active, setActive] = useState('')
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -20,8 +20,8 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    const ids  = ['hero', ...SECTIONS.map(s => s.id)]
-    const els  = ids.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[]
+    const ids = ['hero', ...SECTIONS.map(s => s.id)]
+    const els = ids.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[]
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -76,7 +76,7 @@ export default function Navbar() {
               letterSpacing: '0.14em',
             }}
           >
-            Álex
+            Alex
           </span>
           <span
             style={{
@@ -128,7 +128,7 @@ export default function Navbar() {
               onClick={() => scrollTo(id)}
               className="hidden sm:block relative font-body text-[0.67rem] tracking-[0.1em] uppercase px-3 py-1.5 rounded-full transition-all duration-200"
               style={{
-                color:      isActive ? 'var(--accent)' : '#666',
+                color: isActive ? 'var(--accent)' : '#666',
                 background: isActive ? 'rgba(255,255,255,0.05)' : 'transparent',
               }}
             >

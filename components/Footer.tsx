@@ -100,7 +100,7 @@ export default function Footer() {
           </div>
 
           <span className="font-mono text-[0.48rem] tracking-[0.2em] uppercase text-zinc-700">
-            © 2025 Álex Rubio
+            © 2026 Alex Rubio
           </span>
         </div>
 
