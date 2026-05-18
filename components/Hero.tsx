@@ -237,7 +237,7 @@ export default function Hero() {
             <div className="flex flex-col items-center gap-1">
               <span className="font-display text-white tabular"
                 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', lineHeight: 1 }}>
-                18:30
+                16:15
               </span>
               <span className="font-mono text-[0.44rem] tracking-[0.15em] uppercase text-zinc-600">vs</span>
             </div>
