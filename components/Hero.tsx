@@ -226,37 +226,37 @@ export default function Hero() {
             Próximo partido
           </p>
           <div className="flex items-center gap-5 mb-3">
-            {/* Albacete badge — local */}
+            {/* Las Palmas badge — local */}
+            <div className="flex flex-col items-center gap-1.5">
+              <div className="w-12 h-12 relative">
+                <Image src="/las-palmas.png" alt="UD Las Palmas" fill className="object-contain" sizes="48px" />
+              </div>
+              <span className="font-mono text-[0.44rem] tracking-[0.12em] uppercase text-zinc-500">Las Palmas</span>
+            </div>
+            {/* Centre */}
+            <div className="flex flex-col items-center gap-1">
+              <span className="font-display text-white tabular"
+                style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', lineHeight: 1 }}>
+                21:30
+              </span>
+              <span className="font-mono text-[0.44rem] tracking-[0.15em] uppercase text-zinc-600">vs</span>
+            </div>
+            {/* Albacete badge — visitante */}
             <div className="flex flex-col items-center gap-1.5">
               <div className="w-12 h-12 relative">
                 <Image src="/albacetepng.png" alt="Albacete BP" fill className="object-contain" sizes="48px" />
               </div>
               <span className="font-mono text-[0.44rem] tracking-[0.12em] uppercase text-zinc-500">Albacete</span>
             </div>
-            {/* Centre */}
-            <div className="flex flex-col items-center gap-1">
-              <span className="font-display text-zinc-600 tabular"
-                style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', lineHeight: 1 }}>
-                --:--
-              </span>
-              <span className="font-mono text-[0.44rem] tracking-[0.15em] uppercase text-zinc-600">vs</span>
-            </div>
-            {/* Rival por determinar — temporada finalizada */}
-            <div className="flex flex-col items-center gap-1.5">
-              <div className="w-12 h-12 rounded-full border border-dashed border-zinc-700 flex items-center justify-center">
-                <span className="font-display text-zinc-600" style={{ fontSize: '1.25rem', lineHeight: 1 }}>?</span>
-              </div>
-              <span className="font-mono text-[0.44rem] tracking-[0.12em] uppercase text-zinc-600">Por determinar</span>
-            </div>
           </div>
           <div className="flex items-center gap-3">
             <span className="font-mono text-[0.5rem] tracking-[0.2em] uppercase"
               style={{ color: 'var(--accent)' }}>
-              Temporada finalizada
+              16 Agosto
             </span>
             <span className="w-px h-3 bg-zinc-700 flex-shrink-0" />
             <span className="font-mono text-[0.48rem] tracking-[0.15em] uppercase text-zinc-600">
-              Calendario 26/27 próximamente
+              Estadio Gran Canaria
             </span>
           </div>
         </div>
