@@ -226,37 +226,37 @@ export default function Hero() {
             Próximo partido
           </p>
           <div className="flex items-center gap-5 mb-3">
-            {/* Las Palmas badge — local */}
-            <div className="flex flex-col items-center gap-1.5">
-              <div className="w-12 h-12 relative">
-                <Image src="/las-palmas.png" alt="UD Las Palmas" fill className="object-contain" sizes="48px" />
-              </div>
-              <span className="font-mono text-[0.44rem] tracking-[0.12em] uppercase text-zinc-500">Las Palmas</span>
-            </div>
-            {/* Centre */}
-            <div className="flex flex-col items-center gap-1">
-              <span className="font-display text-white tabular"
-                style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', lineHeight: 1 }}>
-                21:30
-              </span>
-              <span className="font-mono text-[0.44rem] tracking-[0.15em] uppercase text-zinc-600">vs</span>
-            </div>
-            {/* Albacete badge — visitante */}
+            {/* Albacete badge — local */}
             <div className="flex flex-col items-center gap-1.5">
               <div className="w-12 h-12 relative">
                 <Image src="/albacetepng.png" alt="Albacete BP" fill className="object-contain" sizes="48px" />
               </div>
               <span className="font-mono text-[0.44rem] tracking-[0.12em] uppercase text-zinc-500">Albacete</span>
             </div>
+            {/* Centre */}
+            <div className="flex flex-col items-center gap-1">
+              <span className="font-display text-white tabular"
+                style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', lineHeight: 1 }}>
+                19:00
+              </span>
+              <span className="font-mono text-[0.44rem] tracking-[0.15em] uppercase text-zinc-600">vs</span>
+            </div>
+            {/* Oviedo badge — visitante */}
+            <div className="flex flex-col items-center gap-1.5">
+              <div className="w-12 h-12 relative">
+                <Image src="/oviedo.webp" alt="Real Oviedo" fill className="object-contain" sizes="48px" />
+              </div>
+              <span className="font-mono text-[0.44rem] tracking-[0.12em] uppercase text-zinc-500">Oviedo</span>
+            </div>
           </div>
           <div className="flex items-center gap-3">
             <span className="font-mono text-[0.5rem] tracking-[0.2em] uppercase"
               style={{ color: 'var(--accent)' }}>
-              16 Agosto
+              29 Agosto
             </span>
             <span className="w-px h-3 bg-zinc-700 flex-shrink-0" />
             <span className="font-mono text-[0.48rem] tracking-[0.15em] uppercase text-zinc-600">
-              Estadio Gran Canaria
+              Estadio Carlos Belmonte
             </span>
           </div>
         </div>
