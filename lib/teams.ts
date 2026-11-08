@@ -81,7 +81,7 @@ export const TEAMS: Team[] = [
     name: 'Albacete Balompié',
     shortName: 'ALB',
     period: 'Ene 2026 —',
-    goals: 5,
+    goals: 6,
     assists: 0,
     goalsPer90: 0.34,
     accent: '#E8D44D',
